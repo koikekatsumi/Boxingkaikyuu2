@@ -1,12 +1,12 @@
 package com.koike;
 
-public class BoxingData {
+public class Boxer {
     private final String name;
     private final String weight;
 
     private final Integer defense;
 
-    public BoxingData(String name, String weight, Integer defense) {
+    public Boxer(String name, String weight, Integer defense) {
         this.name = name;
         this.weight = weight;
         this.defense = defense;

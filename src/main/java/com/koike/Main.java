@@ -3,18 +3,16 @@ package com.koike;
 import java.util.ArrayList;
 import java.util.List;
 
-import static javax.management.Query.or;
-
 public class Main {
     public static void main(String[] args) {
-        BoxingData boxing1 = new BoxingData("寺地拳四朗", "ライトフライ級", 6);
-        BoxingData boxing2 = new BoxingData("山中慎介", "バンダム級", 12);
-        BoxingData boxing3 = new BoxingData("長谷川穂積", "バンダム級", 11);
-        BoxingData boxing4 = new BoxingData("畑山隆則", "スーパーフェザー級", 1);
-        BoxingData boxing5 = new BoxingData("辰吉丈一郎", "バンダム級", 3);
-        BoxingData boxing6 = new BoxingData("井上拓真", "バンダム級", 0);
+        Boxer boxing1 = new Boxer("寺地拳四朗", "ライトフライ級", 6);
+        Boxer boxing2 = new Boxer("山中慎介", "バンダム級", 12);
+        Boxer boxing3 = new Boxer("長谷川穂積", "バンダム級", 11);
+        Boxer boxing4 = new Boxer("畑山隆則", "スーパーフェザー級", 1);
+        Boxer boxing5 = new Boxer("辰吉丈一郎", "バンダム級", 3);
+        Boxer boxing6 = new Boxer("井上拓真", "バンダム級", 0);
 
-        List<BoxingData> boxingList = new ArrayList<>();
+        List<Boxer> boxingList = new ArrayList<>();
         boxingList.add(boxing1);
         boxingList.add(boxing2);
         boxingList.add(boxing3);
@@ -22,7 +20,7 @@ public class Main {
         boxingList.add(boxing5);
         boxingList.add(boxing6);
 
-        for (BoxingData boxing : boxingList) {
+        for (Boxer boxing : boxingList) {
             switch (boxing.getWeight()) {
                 case "ライトフライ級":
                     System.out.println(boxing.getName() + "は、超軽量級です");
